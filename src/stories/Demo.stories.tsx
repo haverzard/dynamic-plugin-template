@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React, { useState } from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "./globals.css";
 
-import Plugin from '../index';
+import Plugin from "../index";
 
 export default {
-  title: 'haverzard/Demo',
+  title: "haverzard/Demo",
   component: Plugin.Chart,
 } as ComponentMeta<typeof Plugin.Chart>;
 
@@ -38,7 +38,7 @@ const Template: ComponentStory<typeof Plugin.Chart> = ({ data, height, width }) 
       </div>
     </div>
   );
-}
+};
 
 export const CustomizeChart = Template.bind({});
 CustomizeChart.args = {

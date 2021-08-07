@@ -1,17 +1,15 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import "./globals.css";
-import Chart from '../components/Chart';
+import Chart from "../components/Chart";
 
 export default {
-  title: 'haverzard/Chart',
+  title: "haverzard/Chart",
   component: Chart,
 } as ComponentMeta<typeof Chart>;
 
-const Template: ComponentStory<typeof Chart> = (args) => (
-  <Chart {...args} />
-);
+const Template: ComponentStory<typeof Chart> = (args) => <Chart {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
