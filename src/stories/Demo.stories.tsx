@@ -13,8 +13,8 @@ const Template: ComponentStory<typeof Plugin.Chart> = ({ data, height, width }) 
   const [formData, setFormData] = useState<any>(null);
 
   return (
-    <div className="flex w-screen px-32">
-      <div className="bg-gray-100 dark:bg-blue w-1/3 p-8">
+    <div className="flex flex-col md:flex-row items-center w-full md:h-64 md:px-32">
+      <div className="w-5/6 md:w-1/3 h-full bg-gray-100 dark:bg-blue p-4 md:p-8 overflow-y-auto">
         {Plugin.controlPanel.map((section: any, idx: number) => {
           return (
             <div key={idx}>
@@ -33,8 +33,10 @@ const Template: ComponentStory<typeof Plugin.Chart> = ({ data, height, width }) 
           );
         })}
       </div>
-      <div className="w-2/3 bg-gray-300 dark:bg-gray-700 p-8">
-        <Plugin.Chart {...Plugin.transformProps({ height, width, data: data, formData })} />
+      <div className="w-5/6 md:w-2/3 h-full bg-gray-300 dark:bg-gray-700 p-4 md:p-8">
+        <div className="w-full h-full overflow-x-auto">
+          <Plugin.Chart {...Plugin.transformProps({ height, width, data: data, formData })} />
+        </div>
       </div>
     </div>
   );
