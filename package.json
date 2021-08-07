@@ -13,6 +13,7 @@
     "build-webpack": "cross-env BABEL_ENV=bundle npx webpack --config webpack.config.js",
     "build-rollup": "npx rollup --config rollup.config.js",
     "storybook": "start-storybook -p 9001",
+    "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint src/**/*"
   },
   "lint-staged": {
@@ -64,6 +65,7 @@
     "@storybook/addon-links": "^6.3.6",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.3.6",
+    "@storybook/storybook-deployer": "^2.8.10",
     "@types/jest": "^26.0.0",
     "@types/react-map-gl": "^5.2.9",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
